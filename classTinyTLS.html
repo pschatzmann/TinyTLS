@@ -78,6 +78,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>TLS 1.3 client class for Arduino and desktop C++.  
+ <a href="classTinyTLS.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="tinytls_8h_source.html">tinytls.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -141,8 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeb5d7a1edc77c913ff257f388514da45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TLS 1.3 client class for Arduino and desktop C++.</p>
-<p><a class="el" href="classTinyTLS.html">TinyTLS</a> owns the entropy pool, the random generator, the configuration and the session. The application attaches a transport once, configures verification, and then calls <a class="el" href="classTinyTLS.html#a013c97ad7886cdbbecff8d9e8225694f">connect()</a>, <a class="el" href="classTinyTLS.html#a47a321f7d060d16e3cbb9ee3feea9e9d">write()</a>, <a class="el" href="classTinyTLS.html#a99291f47b6a302ce3bc976662964000b">read()</a>, <a class="el" href="classTinyTLS.html#a3ae2bf8b2325c72a592449cdbda50c32">available()</a> and <a class="el" href="classTinyTLS.html#ab50119800f8314b0324e75ddcc58e52e">stop()</a>. The class is not copyable, because the session keeps pointers into it.</p>
+<div class="textblock"><p>TLS 1.3 client class for Arduino and desktop C++. </p>
+<p><a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a> owns the entropy pool, the random generator, the configuration and the session. The application attaches a transport once, configures verification, and then calls <a class="el" href="classTinyTLS.html#a013c97ad7886cdbbecff8d9e8225694f">connect()</a>, <a class="el" href="classTinyTLS.html#a47a321f7d060d16e3cbb9ee3feea9e9d">write()</a>, <a class="el" href="classTinyTLS.html#a99291f47b6a302ce3bc976662964000b">read()</a>, <a class="el" href="classTinyTLS.html#a3ae2bf8b2325c72a592449cdbda50c32">available()</a> and <a class="el" href="classTinyTLS.html#ab50119800f8314b0324e75ddcc58e52e">stop()</a>. The class is not copyable, because the session keeps pointers into it.</p>
 <p>Certificate verification is on by default (VerifyMode::Required). It needs a trust store, and a time source is needed for expiry checks. Without a time source the handshake fails closed and <a class="el" href="classTinyTLS.html#a5b9711b663348c34fda8ad291cd48c13">verifyResult()</a> reports VerifyTimeUnchecked. VerifyMode::None encrypts the connection without authenticating the server.</p>
 <p>Timeouts need a clock (<a class="el" href="classTinyTLS.html#aa36711d89023c9b756d6ed3a2314b2fa">setClock()</a>). Idle waiting is handled by an optional callback (<a class="el" href="classTinyTLS.html#ae2abf5951ee528936adbf218baff12c0">setIdleCallback()</a>), for example yield() or delay(1).</p>
 <div class="fragment"><div class="line">WiFiClient net;</div>
@@ -158,8 +161,8 @@ Public Member Functions</h2></td></tr>
 <div class="line">  }</div>
 <div class="line">  tls.<a class="code hl_function" href="classTinyTLS.html#ab50119800f8314b0324e75ddcc58e52e">stop</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassClientTransport_html"><div class="ttname"><a href="classClientTransport.html">ClientTransport</a></div><div class="ttdef"><b>Definition</b> tls_client.h:22</div></div>
-<div class="ttc" id="aclassTinyTLS_html"><div class="ttname"><a href="classTinyTLS.html">TinyTLS</a></div><div class="ttdef"><b>Definition</b> tinytls.h:47</div></div>
+<div class="ttc" id="aclassClientTransport_html"><div class="ttname"><a href="classClientTransport.html">ClientTransport</a></div><div class="ttdoc">Adapter that presents an Arduino-style client as a Transport.</div><div class="ttdef"><b>Definition</b> tls_client.h:22</div></div>
+<div class="ttc" id="aclassTinyTLS_html"><div class="ttname"><a href="classTinyTLS.html">TinyTLS</a></div><div class="ttdoc">TLS 1.3 client class for Arduino and desktop C++.</div><div class="ttdef"><b>Definition</b> tinytls.h:47</div></div>
 <div class="ttc" id="aclassTinyTLS_html_a013c97ad7886cdbbecff8d9e8225694f"><div class="ttname"><a href="classTinyTLS.html#a013c97ad7886cdbbecff8d9e8225694f">TinyTLS::connect</a></div><div class="ttdeci">bool connect(const char *host, uint16_t port)</div><div class="ttdef"><b>Definition</b> tinytls.h:92</div></div>
 <div class="ttc" id="aclassTinyTLS_html_a24993f99f35cca24d94f714fca841e2d"><div class="ttname"><a href="classTinyTLS.html#a24993f99f35cca24d94f714fca841e2d">TinyTLS::attach</a></div><div class="ttdeci">void attach(tinytls::Transport &amp;transport)</div><div class="ttdef"><b>Definition</b> tinytls.h:71</div></div>
 <div class="ttc" id="aclassTinyTLS_html_a3688a734993fb339bdd774ff712bd1f9"><div class="ttname"><a href="classTinyTLS.html#a3688a734993fb339bdd774ff712bd1f9">TinyTLS::connected</a></div><div class="ttdeci">bool connected()</div><div class="ttdef"><b>Definition</b> tinytls.h:132</div></div>

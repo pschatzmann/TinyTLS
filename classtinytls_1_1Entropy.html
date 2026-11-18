@@ -83,6 +83,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classtinytls_1_1Entropy.html" title="Entropy pool that mixes several sources through SHA-256.">Entropy</a> pool that mixes several sources through SHA-256.  
+ <a href="classtinytls_1_1Entropy.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="entropy_8h_source.html">entropy.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -110,7 +113,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:af27680958fc13f2eb9d3a6e128366299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classtinytls_1_1Entropy.html">Entropy</a> pool that mixes several sources through SHA-256.</p>
+<div class="textblock"><p><a class="el" href="classtinytls_1_1Entropy.html" title="Entropy pool that mixes several sources through SHA-256.">Entropy</a> pool that mixes several sources through SHA-256. </p>
 <p>The pool registers the platform source when it is created. Each <a class="el" href="classtinytls_1_1Entropy.html#a5e74cdf44abd8e33ab195fb6d1dafad1">getBytes()</a> call gathers from every source, then expands the pool with a counter and ratchets it forward, so earlier outputs cannot be recomputed from later state. Up to MaxSources sources can be registered.</p>
 <p>The pool is the input of <a class="el" href="classtinytls_1_1Drbg.html#a9cd94c43094abc8aa2f3c8603175188f">Drbg::seed()</a>; applications rarely use it directly.</p>
 <dl class="section note"><dt>Note</dt><dd>The class is not copyable, because the pool keeps pointers to its sources. Sources registered with <a class="el" href="classtinytls_1_1Entropy.html#acafbb3fad8138fafa63c90c8c6acbd07">addSource()</a> must outlive the pool. </dd></dl>

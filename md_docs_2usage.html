@@ -73,10 +73,10 @@ $(function() {
   <div class="headertitle"><div class="title">Usage</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md24"></a> This page shows how to use <a class="el" href="classTinyTLS.html">TinyTLS</a> in a sketch or C++ project. Certificate validation is covered in <a class="el" href="md_docs_2security.html">Security</a>.</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md24"></a> This page shows how to use <a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a> in a sketch or C++ project. Certificate validation is covered in <a class="el" href="md_docs_2security.html">Security</a>.</p>
 <h1><a class="anchor" id="autotoc_md25"></a>
 SecureClient</h1>
-<p><code><a class="el" href="classSecureClient.html">SecureClient</a>&lt;NetClient&gt;</code> owns the network client and the TLS session, and it works like <code>WiFiClientSecure</code>:</p>
+<p><code><a class="el" href="classSecureClient.html" title="A TLS client that owns its network client, in the style of WiFiClientSecure.">SecureClient</a>&lt;NetClient&gt;</code> owns the network client and the TLS session, and it works like <code>WiFiClientSecure</code>:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="TinyTLS_8h.html">TinyTLS.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="classSecureClient.html">SecureClient&lt;WiFiClient&gt;</a> client;</div>
@@ -89,7 +89,7 @@ SecureClient</h1>
 <div class="line">  client.<a class="code hl_function" href="classSecureClient.html#a1ec61a7ac7b80a43c0538635291f7d41">stop</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aTinyTLS_8h_html"><div class="ttname"><a href="TinyTLS_8h.html">TinyTLS.h</a></div></div>
-<div class="ttc" id="aclassSecureClient_html"><div class="ttname"><a href="classSecureClient.html">SecureClient</a></div><div class="ttdef"><b>Definition</b> tls_client.h:57</div></div>
+<div class="ttc" id="aclassSecureClient_html"><div class="ttname"><a href="classSecureClient.html">SecureClient</a></div><div class="ttdoc">A TLS client that owns its network client, in the style of WiFiClientSecure.</div><div class="ttdef"><b>Definition</b> tls_client.h:57</div></div>
 <div class="ttc" id="aclassSecureClient_html_a1bf1eddd13f8602b30c2487232982dee"><div class="ttname"><a href="classSecureClient.html#a1bf1eddd13f8602b30c2487232982dee">SecureClient::write</a></div><div class="ttdeci">size_t write(const uint8_t *buf, size_t len)</div><div class="ttdef"><b>Definition</b> tls_client.h:86</div></div>
 <div class="ttc" id="aclassSecureClient_html_a1ec61a7ac7b80a43c0538635291f7d41"><div class="ttname"><a href="classSecureClient.html#a1ec61a7ac7b80a43c0538635291f7d41">SecureClient::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition</b> tls_client.h:80</div></div>
 <div class="ttc" id="aclassSecureClient_html_a201e3c1493554cb43dfdfe9c94c9f6d2"><div class="ttname"><a href="classSecureClient.html#a201e3c1493554cb43dfdfe9c94c9f6d2">SecureClient::setVerifyMode</a></div><div class="ttdeci">void setVerifyMode(tinytls::VerifyMode mode)</div><div class="ttdef"><b>Definition</b> tls_client.h:66</div></div>
@@ -101,7 +101,7 @@ SecureClient</h1>
 <p>The transport is any type with <code>connect(host, port)</code>, <code>write</code>, <code>read</code>, <code>available</code>, <code>connected</code> and <code>stop</code>. Arduino <code>WiFiClient</code> and <code>EthernetClient</code> work directly.</p>
 <h1><a class="anchor" id="autotoc_md26"></a>
 TinyTLS</h1>
-<p><code><a class="el" href="classTinyTLS.html">TinyTLS</a></code> is the non-template core class. It owns the entropy pool, the random generator, the configuration and the session. It runs over any transport you attach to it:</p>
+<p><code><a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a></code> is the non-template core class. It owns the entropy pool, the random generator, the configuration and the session. It runs over any transport you attach to it:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="TinyTLS_8h.html">TinyTLS.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line">WiFiClient net;</div>
@@ -116,8 +116,8 @@ TinyTLS</h1>
 <div class="line">  }</div>
 <div class="line">  tls.<a class="code hl_function" href="classTinyTLS.html#ab50119800f8314b0324e75ddcc58e52e">stop</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassClientTransport_html"><div class="ttname"><a href="classClientTransport.html">ClientTransport</a></div><div class="ttdef"><b>Definition</b> tls_client.h:22</div></div>
-<div class="ttc" id="aclassTinyTLS_html"><div class="ttname"><a href="classTinyTLS.html">TinyTLS</a></div><div class="ttdef"><b>Definition</b> tinytls.h:47</div></div>
+<div class="ttc" id="aclassClientTransport_html"><div class="ttname"><a href="classClientTransport.html">ClientTransport</a></div><div class="ttdoc">Adapter that presents an Arduino-style client as a Transport.</div><div class="ttdef"><b>Definition</b> tls_client.h:22</div></div>
+<div class="ttc" id="aclassTinyTLS_html"><div class="ttname"><a href="classTinyTLS.html">TinyTLS</a></div><div class="ttdoc">TLS 1.3 client class for Arduino and desktop C++.</div><div class="ttdef"><b>Definition</b> tinytls.h:47</div></div>
 <div class="ttc" id="aclassTinyTLS_html_a013c97ad7886cdbbecff8d9e8225694f"><div class="ttname"><a href="classTinyTLS.html#a013c97ad7886cdbbecff8d9e8225694f">TinyTLS::connect</a></div><div class="ttdeci">bool connect(const char *host, uint16_t port)</div><div class="ttdef"><b>Definition</b> tinytls.h:92</div></div>
 <div class="ttc" id="aclassTinyTLS_html_a07acab31ac6671f1e72a57d5b4d7a1dd"><div class="ttname"><a href="classTinyTLS.html#a07acab31ac6671f1e72a57d5b4d7a1dd">TinyTLS::setVerifyMode</a></div><div class="ttdeci">void setVerifyMode(tinytls::VerifyMode mode)</div><div class="ttdef"><b>Definition</b> tinytls.h:74</div></div>
 <div class="ttc" id="aclassTinyTLS_html_a24993f99f35cca24d94f714fca841e2d"><div class="ttname"><a href="classTinyTLS.html#a24993f99f35cca24d94f714fca841e2d">TinyTLS::attach</a></div><div class="ttdeci">void attach(tinytls::Transport &amp;transport)</div><div class="ttdef"><b>Definition</b> tinytls.h:71</div></div>
@@ -126,7 +126,7 @@ TinyTLS</h1>
 <div class="ttc" id="aclassTinyTLS_html_a47a321f7d060d16e3cbb9ee3feea9e9d"><div class="ttname"><a href="classTinyTLS.html#a47a321f7d060d16e3cbb9ee3feea9e9d">TinyTLS::write</a></div><div class="ttdeci">size_t write(const uint8_t *buf, size_t len)</div><div class="ttdef"><b>Definition</b> tinytls.h:138</div></div>
 <div class="ttc" id="aclassTinyTLS_html_a954b3cc3c783c2bfa2021d9e73773a41"><div class="ttname"><a href="classTinyTLS.html#a954b3cc3c783c2bfa2021d9e73773a41">TinyTLS::read</a></div><div class="ttdeci">int read(uint8_t *buf, size_t len)</div><div class="ttdef"><b>Definition</b> tinytls.h:164</div></div>
 <div class="ttc" id="aclassTinyTLS_html_ab50119800f8314b0324e75ddcc58e52e"><div class="ttname"><a href="classTinyTLS.html#ab50119800f8314b0324e75ddcc58e52e">TinyTLS::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition</b> tinytls.h:125</div></div>
-</div><!-- fragment --><p><code><a class="el" href="classSecureClient.html">SecureClient</a>&lt;N&gt;</code> is a typed wrapper around <code><a class="el" href="classTinyTLS.html">TinyTLS</a></code> with an embedded transport.</p>
+</div><!-- fragment --><p><code><a class="el" href="classSecureClient.html" title="A TLS client that owns its network client, in the style of WiFiClientSecure.">SecureClient</a>&lt;N&gt;</code> is a typed wrapper around <code><a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a></code> with an embedded transport.</p>
 <h1><a class="anchor" id="autotoc_md27"></a>
 Certificate validation</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="TinyTLS_8h.html">TinyTLS.h</a>&gt;</span></div>

@@ -77,6 +77,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A TLS client that owns its network client, in the style of WiFiClientSecure.  
+ <a href="classSecureClient.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="tls__client_8h_source.html">tls_client.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -136,17 +139,17 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename NetClient&gt;<br />
-class SecureClient&lt; NetClient &gt;</div><p>A TLS client that owns its network client, in the style of WiFiClientSecure.</p>
-<p><a class="el" href="classSecureClient.html">SecureClient</a> creates the transport, the <a class="el" href="classTinyTLS.html">TinyTLS</a> object and the network client itself, so an application needs only one object. Every method forwards to the <a class="el" href="classTinyTLS.html">TinyTLS</a> instance, which <a class="el" href="classSecureClient.html#adc32ec5de45caadc1ddefba44fc7f087">tls()</a> exposes for advanced configuration.</p>
+class SecureClient&lt; NetClient &gt;</div><p>A TLS client that owns its network client, in the style of WiFiClientSecure. </p>
+<p><a class="el" href="classSecureClient.html" title="A TLS client that owns its network client, in the style of WiFiClientSecure.">SecureClient</a> creates the transport, the <a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a> object and the network client itself, so an application needs only one object. Every method forwards to the <a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a> instance, which <a class="el" href="classSecureClient.html#adc32ec5de45caadc1ddefba44fc7f087">tls()</a> exposes for advanced configuration.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classSecureClient.html">SecureClient&lt;WiFiClient&gt;</a> <a class="code hl_function" href="classSecureClient.html#a6c897cd68c99e282fb99d2cfba75941d">client</a>;</div>
 <div class="line"><a class="code hl_function" href="classSecureClient.html#a6c897cd68c99e282fb99d2cfba75941d">client</a>.<a class="code hl_function" href="classSecureClient.html#a7502f718eb4543c7946ba71d5f374722">setTrustStore</a>(&amp;roots);</div>
 <div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="classSecureClient.html#a6c897cd68c99e282fb99d2cfba75941d">client</a>.connect(<span class="stringliteral">&quot;example.com&quot;</span>, 443)) { <span class="comment">// ... }</span></div>
-<div class="ttc" id="aclassSecureClient_html"><div class="ttname"><a href="classSecureClient.html">SecureClient</a></div><div class="ttdef"><b>Definition</b> tls_client.h:57</div></div>
+<div class="ttc" id="aclassSecureClient_html"><div class="ttname"><a href="classSecureClient.html">SecureClient</a></div><div class="ttdoc">A TLS client that owns its network client, in the style of WiFiClientSecure.</div><div class="ttdef"><b>Definition</b> tls_client.h:57</div></div>
 <div class="ttc" id="aclassSecureClient_html_a6c897cd68c99e282fb99d2cfba75941d"><div class="ttname"><a href="classSecureClient.html#a6c897cd68c99e282fb99d2cfba75941d">SecureClient::client</a></div><div class="ttdeci">NetClient &amp; client()</div><div class="ttdef"><b>Definition</b> tls_client.h:106</div></div>
 <div class="ttc" id="aclassSecureClient_html_a7502f718eb4543c7946ba71d5f374722"><div class="ttname"><a href="classSecureClient.html#a7502f718eb4543c7946ba71d5f374722">SecureClient::setTrustStore</a></div><div class="ttdeci">void setTrustStore(const tinytls::CertificateStore *store)</div><div class="ttdef"><b>Definition</b> tls_client.h:68</div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">NetClient</td><td>Network client type with the methods listed for <a class="el" href="classClientTransport.html">ClientTransport</a>. </td></tr>
+    <tr><td class="paramname">NetClient</td><td>Network client type with the methods listed for <a class="el" href="classClientTransport.html" title="Adapter that presents an Arduino-style client as a Transport.">ClientTransport</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -708,7 +711,7 @@ template&lt;typename NetClient &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The embedded <a class="el" href="classTinyTLS.html">TinyTLS</a> object. </p>
+<p>The embedded <a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a> object. </p>
 
 </div>
 </div>

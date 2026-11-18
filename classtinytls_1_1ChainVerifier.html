@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Validates a server certificate chain against a trust store.  
+ <a href="classtinytls_1_1ChainVerifier.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="x509_8h_source.html">x509.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -91,7 +94,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad717997261f49520a1cbdc0bc2bcc7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Validates a server certificate chain against a trust store.</p>
+<div class="textblock"><p>Validates a server certificate chain against a trust store. </p>
 <p>A verifier is created for one check, with a host name (or NULL to skip the name check), the current time (negative if unknown) and the trust store. <a class="el" href="classtinytls_1_1ChainVerifier.html#ad717997261f49520a1cbdc0bc2bcc7e5">verify()</a> checks, in order:</p><ul>
 <li>every certificate is inside its validity period (only when a time is known),</li>
 <li>the leaf names the host through a subjectAltName dNSName,</li>

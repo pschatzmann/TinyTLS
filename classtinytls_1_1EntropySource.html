@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Interface for a source of entropy.  
+ <a href="classtinytls_1_1EntropySource.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="entropy_8h_source.html">entropy.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for tinytls::EntropySource:</div>
@@ -88,7 +91,7 @@ Inheritance diagram for tinytls::EntropySource:</div>
  <div class="center">
   <img src="classtinytls_1_1EntropySource.png" usemap="#tinytls::EntropySource_map" alt=""/>
   <map id="tinytls::EntropySource_map" name="tinytls::EntropySource_map">
-<area href="classtinytls_1_1PlatformEntropySource.html" alt="tinytls::PlatformEntropySource" shape="rect" coords="0,56,181,80"/>
+<area href="classtinytls_1_1PlatformEntropySource.html" title="Entropy source backed by the platform random number generator." alt="tinytls::PlatformEntropySource" shape="rect" coords="0,56,181,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -98,14 +101,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8094aa47d5aec6c52975e3855d23eb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface for a source of entropy.</p>
-<p>Implement <a class="el" href="classtinytls_1_1EntropySource.html#a8094aa47d5aec6c52975e3855d23eb56">poll()</a> to supply random bytes from hardware, a sensor or application data, and register the source with <a class="el" href="classtinytls_1_1Entropy.html#acafbb3fad8138fafa63c90c8c6acbd07">Entropy::addSource()</a>. The source must outlive the <a class="el" href="classtinytls_1_1Entropy.html">Entropy</a> pool that uses it.</p>
+<div class="textblock"><p>Interface for a source of entropy. </p>
+<p>Implement <a class="el" href="classtinytls_1_1EntropySource.html#a8094aa47d5aec6c52975e3855d23eb56">poll()</a> to supply random bytes from hardware, a sensor or application data, and register the source with <a class="el" href="classtinytls_1_1Entropy.html#acafbb3fad8138fafa63c90c8c6acbd07">Entropy::addSource()</a>. The source must outlive the <a class="el" href="classtinytls_1_1Entropy.html" title="Entropy pool that mixes several sources through SHA-256.">Entropy</a> pool that uses it.</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span><a class="code hl_class" href="classtinytls_1_1HeapArray.html">AdcSource</a> : <span class="keyword">public</span> <a class="code hl_class" href="classtinytls_1_1EntropySource.html">tinytls::EntropySource</a> {</div>
 <div class="line"> <span class="keyword">public</span>:</div>
 <div class="line">  <span class="keywordtype">bool</span> poll(<a class="code hl_class" href="classtinytls_1_1HeapArray.html">uint8_t</a> *<a class="code hl_class" href="classtinytls_1_1HeapArray.html">out</a>, <span class="keywordtype">size_t</span> <a class="code hl_class" href="classtinytls_1_1HeapArray.html">len</a>, <span class="keywordtype">size_t</span> *<a class="code hl_class" href="classtinytls_1_1HeapArray.html">olen</a>)<span class="keyword"> override </span>{ <span class="comment">// ... return true; }</span></div>
 <div class="line">};</div>
-<div class="ttc" id="aclasstinytls_1_1EntropySource_html"><div class="ttname"><a href="classtinytls_1_1EntropySource.html">tinytls::EntropySource</a></div><div class="ttdef"><b>Definition</b> entropy.h:44</div></div>
-<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
+<div class="ttc" id="aclasstinytls_1_1EntropySource_html"><div class="ttname"><a href="classtinytls_1_1EntropySource.html">tinytls::EntropySource</a></div><div class="ttdoc">Interface for a source of entropy.</div><div class="ttdef"><b>Definition</b> entropy.h:44</div></div>
+<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdoc">Zero-initialised array on the heap. Not copyable. The contents are wiped when the array is destroyed,...</div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8094aa47d5aec6c52975e3855d23eb56" name="a8094aa47d5aec6c52975e3855d23eb56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8094aa47d5aec6c52975e3855d23eb56">&#9670;&#160;</a></span>poll()</h2>

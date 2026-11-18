@@ -82,6 +82,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>ECDSA signature verification on NIST P-256 (secp256r1, FIPS 186-4).  
+ <a href="classtinytls_1_1EcdsaP256.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ecdsa__p256_8h_source.html">ecdsa_p256.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -94,13 +97,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af6a3ac4722b750cec081f98bcc49ced8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>ECDSA signature verification on NIST P-256 (secp256r1, FIPS 186-4).</p>
-<p>Construct the object once; it sets up the curve constants. <a class="el" href="classtinytls_1_1EcdsaP256.html#a99f3fa95b04663ad715b66a2ad3b093d">ready()</a> reports whether the setup succeeded. <a class="el" href="classtinytls_1_1EcdsaP256.html#af6a3ac4722b750cec081f98bcc49ced8">verify()</a> can then be called for each signature. Points are computed in Jacobian coordinates in <a class="el" href="classtinytls_1_1Montgomery.html">Montgomery</a> form, so the only field inversion is the final conversion to affine coordinates. The public key is checked to lie on the curve.</p>
+<div class="textblock"><p>ECDSA signature verification on NIST P-256 (secp256r1, FIPS 186-4). </p>
+<p>Construct the object once; it sets up the curve constants. <a class="el" href="classtinytls_1_1EcdsaP256.html#a99f3fa95b04663ad715b66a2ad3b093d">ready()</a> reports whether the setup succeeded. <a class="el" href="classtinytls_1_1EcdsaP256.html#af6a3ac4722b750cec081f98bcc49ced8">verify()</a> can then be called for each signature. Points are computed in Jacobian coordinates in <a class="el" href="classtinytls_1_1Montgomery.html" title="Modular arithmetic modulo an odd modulus, using Montgomery reduction. Values are kept in Montgomery f...">Montgomery</a> form, so the only field inversion is the final conversion to affine coordinates. The public key is checked to lie on the curve.</p>
 <p>Only verification is implemented. It works on public data only and is not constant-time, which is acceptable for verification.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classtinytls_1_1EcdsaP256.html">EcdsaP256</a> <a class="code hl_class" href="classtinytls_1_1HeapArray.html">curve</a>;</div>
 <div class="line"><a class="code hl_enumeration" href="config_8h.html#ab7bbdb2fb604fd69a0356eea19987acf">Error</a> <a class="code hl_class" href="classtinytls_1_1HeapArray.html">rc</a> = <a class="code hl_class" href="classtinytls_1_1HeapArray.html">curve</a>.verify(x, <a class="code hl_class" href="classtinytls_1_1HeapArray.html">y</a>, digest, 32, r, s);   <span class="comment">// x, y, r, s: 32 bytes each</span></div>
-<div class="ttc" id="aclasstinytls_1_1EcdsaP256_html"><div class="ttname"><a href="classtinytls_1_1EcdsaP256.html">tinytls::EcdsaP256</a></div><div class="ttdef"><b>Definition</b> ecdsa_p256.h:31</div></div>
-<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
+<div class="ttc" id="aclasstinytls_1_1EcdsaP256_html"><div class="ttname"><a href="classtinytls_1_1EcdsaP256.html">tinytls::EcdsaP256</a></div><div class="ttdoc">ECDSA signature verification on NIST P-256 (secp256r1, FIPS 186-4).</div><div class="ttdef"><b>Definition</b> ecdsa_p256.h:31</div></div>
+<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdoc">Zero-initialised array on the heap. Not copyable. The contents are wiped when the array is destroyed,...</div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
 <div class="ttc" id="aconfig_8h_html_ab7bbdb2fb604fd69a0356eea19987acf"><div class="ttname"><a href="config_8h.html#ab7bbdb2fb604fd69a0356eea19987acf">tinytls::Error</a></div><div class="ttdeci">Error</div><div class="ttdef"><b>Definition</b> config.h:77</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afbc1e02006eb1586211e7c5481054bee" name="afbc1e02006eb1586211e7c5481054bee"></a>

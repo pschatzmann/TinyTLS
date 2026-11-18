@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classtinytls_1_1Entropy.html" title="Entropy pool that mixes several sources through SHA-256.">Entropy</a> source backed by the platform random number generator.  
+ <a href="classtinytls_1_1PlatformEntropySource.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="entropy_8h_source.html">entropy.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for tinytls::PlatformEntropySource:</div>
@@ -88,7 +91,7 @@ Inheritance diagram for tinytls::PlatformEntropySource:</div>
  <div class="center">
   <img src="classtinytls_1_1PlatformEntropySource.png" usemap="#tinytls::PlatformEntropySource_map" alt=""/>
   <map id="tinytls::PlatformEntropySource_map" name="tinytls::PlatformEntropySource_map">
-<area href="classtinytls_1_1EntropySource.html" alt="tinytls::EntropySource" shape="rect" coords="0,0,181,24"/>
+<area href="classtinytls_1_1EntropySource.html" title="Interface for a source of entropy." alt="tinytls::EntropySource" shape="rect" coords="0,0,181,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -98,13 +101,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9f3b666f5f86a203a3f64cae35c256c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classtinytls_1_1Entropy.html">Entropy</a> source backed by the platform random number generator.</p>
+<div class="textblock"><p><a class="el" href="classtinytls_1_1Entropy.html" title="Entropy pool that mixes several sources through SHA-256.">Entropy</a> source backed by the platform random number generator. </p>
 <p>Behaviour per platform:</p><ul>
 <li>ESP32 (Arduino): the hardware RNG through esp_fill_random().</li>
 <li>Other Arduino boards: a WEAK fallback that mixes micros() and floating analog pin noise. Add a stronger source with <a class="el" href="classtinytls_1_1Entropy.html#acafbb3fad8138fafa63c90c8c6acbd07">Entropy::addSource()</a> before generating keys in production.</li>
 <li>Desktop and tests: std::random_device.</li>
 </ul>
-<p>The <a class="el" href="classtinytls_1_1Entropy.html">Entropy</a> pool owns one instance and registers it automatically. </p>
+<p>The <a class="el" href="classtinytls_1_1Entropy.html" title="Entropy pool that mixes several sources through SHA-256.">Entropy</a> pool owns one instance and registers it automatically. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9f3b666f5f86a203a3f64cae35c256c9" name="a9f3b666f5f86a203a3f64cae35c256c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f3b666f5f86a203a3f64cae35c256c9">&#9670;&#160;</a></span>poll()</h2>

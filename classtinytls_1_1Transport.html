@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract byte transport used by the TLS session.  
+ <a href="classtinytls_1_1Transport.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="transport_8h_source.html">transport.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for tinytls::Transport:</div>
@@ -88,7 +91,7 @@ Inheritance diagram for tinytls::Transport:</div>
  <div class="center">
   <img src="classtinytls_1_1Transport.png" usemap="#tinytls::Transport_map" alt=""/>
   <map id="tinytls::Transport_map" name="tinytls::Transport_map">
-<area href="classClientTransport.html" alt="ClientTransport&lt; NetClient &gt;" shape="rect" coords="0,56,173,80"/>
+<area href="classClientTransport.html" title="Adapter that presents an Arduino-style client as a Transport." alt="ClientTransport&lt; NetClient &gt;" shape="rect" coords="0,56,173,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -108,8 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afbb8c4ee2e3d7bd07ed664c6ecc35d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract byte transport used by the TLS session.</p>
-<p>A transport represents a TCP-like connection and must not block. <a class="el" href="classtinytls_1_1Transport.html#a48acdb1bdb2d819ba8439e517bd11413">write()</a> accepts what the network can take and returns 0 when it cannot accept more right now. <a class="el" href="classtinytls_1_1Transport.html#aa64f935639f08963d55c8d857e9f81fd">read()</a> returns -1 when no data is available. Implement this interface directly, or wrap an existing client type with <a class="el" href="classClientTransport.html">ClientTransport</a>.</p>
+<div class="textblock"><p>Abstract byte transport used by the TLS session. </p>
+<p>A transport represents a TCP-like connection and must not block. <a class="el" href="classtinytls_1_1Transport.html#a48acdb1bdb2d819ba8439e517bd11413">write()</a> accepts what the network can take and returns 0 when it cannot accept more right now. <a class="el" href="classtinytls_1_1Transport.html#aa64f935639f08963d55c8d857e9f81fd">read()</a> returns -1 when no data is available. Implement this interface directly, or wrap an existing client type with <a class="el" href="classClientTransport.html" title="Adapter that presents an Arduino-style client as a Transport.">ClientTransport</a>.</p>
 <p>The session never owns the transport; the caller keeps it alive while the connection is in use. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3521e6f76b2cc7d8727d413f13cf71df" name="a3521e6f76b2cc7d8727d413f13cf71df"></a>

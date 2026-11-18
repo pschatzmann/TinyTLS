@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>TLS 1.3 client session (RFC 8446): handshake, record layer and application data.  
+ <a href="classtinytls_1_1Session.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="session_8h_source.html">session.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -125,11 +128,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa9b88984194281f81dc20c736e6fb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TLS 1.3 client session (RFC 8446): handshake, record layer and application data.</p>
-<p>The session runs over a <a class="el" href="classtinytls_1_1Transport.html">Transport</a> and draws randomness from a <a class="el" href="classtinytls_1_1Drbg.html">Drbg</a>. Every operation that would block returns <a class="el" href="config_8h.html#ab7bbdb2fb604fd69a0356eea19987acfa990c2dc0ec8fbde16a535a5f52ebd7ec" title="No data yet; retry when the transport is readable.">Error::WantRead</a> or <a class="el" href="config_8h.html#ab7bbdb2fb604fd69a0356eea19987acfa84f90686d540ec0fcc5a6aa0365d1bf7" title="Transport not writable yet; retry.">Error::WantWrite</a>, and the next call continues where the previous one stopped. This keeps the session usable from a single-threaded Arduino loop.</p>
-<p>Supported: TLS 1.3, client role, the cipher suites TLS_AES_128_GCM_SHA256 and TLS_CHACHA20_POLY1305_SHA256, the <a class="el" href="classtinytls_1_1X25519.html">X25519</a> key exchange, SNI, KeyUpdate, and the verification modes None, Optional and Required.</p>
+<div class="textblock"><p>TLS 1.3 client session (RFC 8446): handshake, record layer and application data. </p>
+<p>The session runs over a <a class="el" href="classtinytls_1_1Transport.html" title="Abstract byte transport used by the TLS session.">Transport</a> and draws randomness from a <a class="el" href="classtinytls_1_1Drbg.html" title="Deterministic random bit generator (ChaCha20-based).">Drbg</a>. Every operation that would block returns <a class="el" href="config_8h.html#ab7bbdb2fb604fd69a0356eea19987acfa990c2dc0ec8fbde16a535a5f52ebd7ec" title="No data yet; retry when the transport is readable.">Error::WantRead</a> or <a class="el" href="config_8h.html#ab7bbdb2fb604fd69a0356eea19987acfa84f90686d540ec0fcc5a6aa0365d1bf7" title="Transport not writable yet; retry.">Error::WantWrite</a>, and the next call continues where the previous one stopped. This keeps the session usable from a single-threaded Arduino loop.</p>
+<p>Supported: TLS 1.3, client role, the cipher suites TLS_AES_128_GCM_SHA256 and TLS_CHACHA20_POLY1305_SHA256, the <a class="el" href="classtinytls_1_1X25519.html" title="X25519 Diffie-Hellman key agreement on Curve25519 (RFC 7748).">X25519</a> key exchange, SNI, KeyUpdate, and the verification modes None, Optional and Required.</p>
 <p>Not supported: HelloRetryRequest, client certificates, pre-shared keys, 0-RTT and session resumption.</p>
-<p>Applications normally use <a class="el" href="classTinyTLS.html">TinyTLS</a>, which owns the entropy, the DRBG and the configuration. <a class="el" href="classtinytls_1_1Session.html">Session</a> is available for code that manages those parts itself. </p>
+<p>Applications normally use <a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a>, which owns the entropy, the DRBG and the configuration. <a class="el" href="classtinytls_1_1Session.html" title="TLS 1.3 client session (RFC 8446): handshake, record layer and application data.">Session</a> is available for code that manages those parts itself. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5bece2a24f7ae6fc4f9b2c677beccd7b" name="a5bece2a24f7ae6fc4f9b2c677beccd7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bece2a24f7ae6fc4f9b2c677beccd7b">&#9670;&#160;</a></span>Session()</h2>

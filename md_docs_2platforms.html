@@ -89,7 +89,7 @@ Memory placement</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">PEM decode buffer (only while loading)   </td><td class="markdownTableBodyNone">3 KB   </td><td class="markdownTableBodyNone">PSRAM    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>Session</code> object, <code><a class="el" href="classTinyTLS.html">TinyTLS</a></code> object   </td><td class="markdownTableBodyNone">about 2.9 KB and 0.6 KB   </td><td class="markdownTableBodyNone">internal RAM    </td></tr>
+<td class="markdownTableBodyNone"><code>Session</code> object, <code><a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a></code> object   </td><td class="markdownTableBodyNone">about 2.9 KB and 0.6 KB   </td><td class="markdownTableBodyNone">internal RAM    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Big-integer limbs, ECDSA and RSA workspaces   </td><td class="markdownTableBodyNone">0.2 to 1 KB, many per handshake   </td><td class="markdownTableBodyNone">internal RAM    </td></tr>
 <tr class="markdownTableRowOdd">
@@ -101,10 +101,10 @@ Stack use</h1>
 <p>The largest call frame in the signature code is about 512 bytes. This was measured with <code>-Os -fstack-usage</code> on a 64-bit host; 32-bit targets use less.</p>
 <h1><a class="anchor" id="autotoc_md11"></a>
 Allocation failure</h1>
-<p>Allocation failure aborts, because the library uses plain <code>new</code> and <code>malloc</code>. Make sure the heap has room for one session before connecting. Destroying the <code><a class="el" href="classTinyTLS.html">TinyTLS</a></code> object, or letting its <code><a class="el" href="classSecureClient.html">SecureClient</a></code> go out of scope, frees the memory.</p>
+<p>Allocation failure aborts, because the library uses plain <code>new</code> and <code>malloc</code>. Make sure the heap has room for one session before connecting. Destroying the <code><a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a></code> object, or letting its <code><a class="el" href="classSecureClient.html" title="A TLS client that owns its network client, in the style of WiFiClientSecure.">SecureClient</a></code> go out of scope, frees the memory.</p>
 <h1><a class="anchor" id="autotoc_md12"></a>
 Entropy</h1>
-<p>The default source is the ESP32 hardware RNG on ESP32. On other Arduino boards it is a weak timing-based fallback. Register a hardware source with <code>Entropy::addSource()</code> before using <a class="el" href="classTinyTLS.html">TinyTLS</a> in production.</p>
+<p>The default source is the ESP32 hardware RNG on ESP32. On other Arduino boards it is a weak timing-based fallback. Register a hardware source with <code>Entropy::addSource()</code> before using <a class="el" href="classTinyTLS.html" title="TLS 1.3 client class for Arduino and desktop C++.">TinyTLS</a> in production.</p>
 <h1><a class="anchor" id="autotoc_md13"></a>
 Speed</h1>
 <p>AES-GCM uses a bit-serial GHASH. It is compact, but slow on small MCUs.</p>

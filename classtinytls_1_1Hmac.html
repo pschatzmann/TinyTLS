@@ -82,6 +82,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Incremental HMAC-SHA256 message authentication (RFC 2104).  
+ <a href="classtinytls_1_1Hmac.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="hkdf_8h_source.html">hkdf.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -107,13 +110,13 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a7b37bf0e4e63384c7ca685ee6e74aedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Incremental HMAC-SHA256 message authentication (RFC 2104).</p>
+<div class="textblock"><p>Incremental HMAC-SHA256 message authentication (RFC 2104). </p>
 <p>The constructor starts a computation with a key. Keys longer than the SHA-256 block size are hashed first. <a class="el" href="classtinytls_1_1Hmac.html#aa7fe47b8353f861e56f0bcf728c36714">start()</a> restarts the object with a new key, so one object can compute many tags. The derived outer padding is wiped when the object is destroyed.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classtinytls_1_1Hmac.html">Hmac</a> <a class="code hl_class" href="classtinytls_1_1HeapArray.html">m</a>(<a class="code hl_class" href="classtinytls_1_1HeapArray.html">key</a>, <a class="code hl_class" href="classtinytls_1_1HeapArray.html">key_len</a>);</div>
 <div class="line"><a class="code hl_class" href="classtinytls_1_1HeapArray.html">m</a>.update(data, <a class="code hl_class" href="classtinytls_1_1HeapArray.html">data_len</a>);</div>
 <div class="line"><a class="code hl_class" href="classtinytls_1_1HeapArray.html">m</a>.finish(<a class="code hl_class" href="classtinytls_1_1HeapArray.html">tag</a>);   <span class="comment">// tag: 32 bytes</span></div>
-<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
-<div class="ttc" id="aclasstinytls_1_1Hmac_html"><div class="ttname"><a href="classtinytls_1_1Hmac.html">tinytls::Hmac</a></div><div class="ttdef"><b>Definition</b> hkdf.h:29</div></div>
+<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdoc">Zero-initialised array on the heap. Not copyable. The contents are wiped when the array is destroyed,...</div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
+<div class="ttc" id="aclasstinytls_1_1Hmac_html"><div class="ttname"><a href="classtinytls_1_1Hmac.html">tinytls::Hmac</a></div><div class="ttdoc">Incremental HMAC-SHA256 message authentication (RFC 2104).</div><div class="ttdef"><b>Definition</b> hkdf.h:29</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac53ee657e5b2e456bb839c2f90443928" name="ac53ee657e5b2e456bb839c2f90443928"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac53ee657e5b2e456bb839c2f90443928">&#9670;&#160;</a></span>Hmac() <span class="overload">[1/2]</span></h2>

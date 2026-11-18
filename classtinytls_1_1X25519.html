@@ -82,6 +82,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classtinytls_1_1X25519.html" title="X25519 Diffie-Hellman key agreement on Curve25519 (RFC 7748).">X25519</a> Diffie-Hellman key agreement on Curve25519 (RFC 7748).  
+ <a href="classtinytls_1_1X25519.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="x25519_8h_source.html">x25519.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -99,15 +102,15 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aa5ea2b04f2de2af9411ff5b897f0adaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classtinytls_1_1X25519.html">X25519</a> Diffie-Hellman key agreement on Curve25519 (RFC 7748).</p>
-<p>The <a class="el" href="classtinytls_1_1Montgomery.html">Montgomery</a> ladder works on the u-coordinate only. <a class="el" href="classtinytls_1_1X25519.html#a9ed8364d89459d5d433d581e97a2dfdb">publicKey()</a> computes the public key for a 32-byte private scalar, and <a class="el" href="classtinytls_1_1X25519.html#a27068d84a390c55ab602450ebd2dd023">scalarmult()</a> computes the shared secret with a peer's public key. Both return false for an all-zero result, which a low-order peer key produces. The caller must reject that case.</p>
+<div class="textblock"><p><a class="el" href="classtinytls_1_1X25519.html" title="X25519 Diffie-Hellman key agreement on Curve25519 (RFC 7748).">X25519</a> Diffie-Hellman key agreement on Curve25519 (RFC 7748). </p>
+<p>The <a class="el" href="classtinytls_1_1Montgomery.html" title="Modular arithmetic modulo an odd modulus, using Montgomery reduction. Values are kept in Montgomery f...">Montgomery</a> ladder works on the u-coordinate only. <a class="el" href="classtinytls_1_1X25519.html#a9ed8364d89459d5d433d581e97a2dfdb">publicKey()</a> computes the public key for a 32-byte private scalar, and <a class="el" href="classtinytls_1_1X25519.html#a27068d84a390c55ab602450ebd2dd023">scalarmult()</a> computes the shared secret with a peer's public key. Both return false for an all-zero result, which a low-order peer key produces. The caller must reject that case.</p>
 <p>Scalars are clamped as the RFC requires, so any 32 random bytes are a valid private key.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classtinytls_1_1X25519.html">X25519</a> x;</div>
 <div class="line"><a class="code hl_class" href="classtinytls_1_1HeapArray.html">uint8_t</a> <a class="code hl_class" href="classtinytls_1_1HeapArray.html">pub</a>[32], <a class="code hl_class" href="classtinytls_1_1HeapArray.html">shared</a>[32];</div>
 <div class="line">x.<a class="code hl_function" href="classtinytls_1_1X25519.html#a9ed8364d89459d5d433d581e97a2dfdb">publicKey</a>(<a class="code hl_class" href="classtinytls_1_1HeapArray.html">priv</a>, <a class="code hl_class" href="classtinytls_1_1HeapArray.html">pub</a>);</div>
 <div class="line"><span class="keywordflow">if</span> (!x.<a class="code hl_function" href="classtinytls_1_1X25519.html#a27068d84a390c55ab602450ebd2dd023">scalarmult</a>(<a class="code hl_class" href="classtinytls_1_1HeapArray.html">shared</a>, <a class="code hl_class" href="classtinytls_1_1HeapArray.html">priv</a>, <a class="code hl_class" href="classtinytls_1_1HeapArray.html">peer_pub</a>)) { <span class="comment">// low-order peer key }</span></div>
-<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
-<div class="ttc" id="aclasstinytls_1_1X25519_html"><div class="ttname"><a href="classtinytls_1_1X25519.html">tinytls::X25519</a></div><div class="ttdef"><b>Definition</b> x25519.h:30</div></div>
+<div class="ttc" id="aclasstinytls_1_1HeapArray_html"><div class="ttname"><a href="classtinytls_1_1HeapArray.html">tinytls::HeapArray</a></div><div class="ttdoc">Zero-initialised array on the heap. Not copyable. The contents are wiped when the array is destroyed,...</div><div class="ttdef"><b>Definition</b> heap.h:39</div></div>
+<div class="ttc" id="aclasstinytls_1_1X25519_html"><div class="ttname"><a href="classtinytls_1_1X25519.html">tinytls::X25519</a></div><div class="ttdoc">X25519 Diffie-Hellman key agreement on Curve25519 (RFC 7748).</div><div class="ttdef"><b>Definition</b> x25519.h:30</div></div>
 <div class="ttc" id="aclasstinytls_1_1X25519_html_a27068d84a390c55ab602450ebd2dd023"><div class="ttname"><a href="classtinytls_1_1X25519.html#a27068d84a390c55ab602450ebd2dd023">tinytls::X25519::scalarmult</a></div><div class="ttdeci">bool scalarmult(uint8_t q[32], const uint8_t n[32], const uint8_t p[32])</div><div class="ttdef"><b>Definition</b> x25519.h:38</div></div>
 <div class="ttc" id="aclasstinytls_1_1X25519_html_a9ed8364d89459d5d433d581e97a2dfdb"><div class="ttname"><a href="classtinytls_1_1X25519.html#a9ed8364d89459d5d433d581e97a2dfdb">tinytls::X25519::publicKey</a></div><div class="ttdeci">bool publicKey(const uint8_t priv[32], uint8_t pub[32])</div><div class="ttdef"><b>Definition</b> x25519.h:97</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>

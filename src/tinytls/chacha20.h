@@ -10,7 +10,7 @@
 namespace tinytls {
 
 /**
- * ChaCha20 stream cipher (RFC 8439 sections 2.3 and 2.4).
+ * @brief ChaCha20 stream cipher (RFC 8439 sections 2.3 and 2.4).
  *
  * A keystream generator with a 256-bit key, a 96-bit nonce and a 32-bit block
  * counter. update() XORs keystream into data and can be called repeatedly, so a

@@ -11,7 +11,7 @@
 namespace tinytls {
 
 /**
- * AES-GCM authenticated encryption (NIST SP 800-38D).
+ * @brief AES-GCM authenticated encryption (NIST SP 800-38D).
  *
  * Call setKey() once with a 16- or 32-byte AES key, then encrypt() or decrypt()
  * for each message. Any IV length is accepted; 12 bytes is the case used by

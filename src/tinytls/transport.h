@@ -10,7 +10,7 @@
 namespace tinytls {
 
 /**
- * Abstract byte transport used by the TLS session.
+ * @brief Abstract byte transport used by the TLS session.
  *
  * A transport represents a TCP-like connection and must not block. write() accepts
  * what the network can take and returns 0 when it cannot accept more right now.

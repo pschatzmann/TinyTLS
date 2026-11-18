@@ -12,7 +12,7 @@
 namespace tinytls {
 
 /**
- * ChaCha20-Poly1305 authenticated encryption (RFC 8439 section 2.8).
+ * @brief ChaCha20-Poly1305 authenticated encryption (RFC 8439 section 2.8).
  *
  * The AEAD construction used by TLS_CHACHA20_POLY1305_SHA256. The one-time
  * Poly1305 key comes from the first ChaCha20 block, and the payload is encrypted

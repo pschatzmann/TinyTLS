@@ -13,7 +13,7 @@
 namespace tinytls {
 
 /**
- * Incremental HMAC-SHA256 message authentication (RFC 2104).
+ * @brief Incremental HMAC-SHA256 message authentication (RFC 2104).
  *
  * The constructor starts a computation with a key. Keys longer than the
  * SHA-256 block size are hashed first. start() restarts the object with a new
@@ -86,7 +86,7 @@ class Hmac {
 };
 
 /**
- * HMAC-based key derivation (RFC 5869) and the TLS 1.3 secret helpers (RFC 8446 section 7.1).
+ * @brief HMAC-based key derivation (RFC 5869) and the TLS 1.3 secret helpers (RFC 8446 section 7.1).
  *
  * The class provides the steps of the TLS 1.3 key schedule:
  * - extract() derives a pseudorandom key (PRK) from salt and input key material,

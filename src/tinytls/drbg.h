@@ -13,7 +13,7 @@
 namespace tinytls {
 
 /**
- * Deterministic random bit generator (ChaCha20-based).
+ * @brief Deterministic random bit generator (ChaCha20-based).
  *
  * seed() takes 48 bytes from an Entropy pool and derives a 256-bit key. random()
  * produces output under the current key and then rekeys with the next 32

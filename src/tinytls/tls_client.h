@@ -7,7 +7,7 @@
 #include "tinytls.h"
 
 /**
- * Adapter that presents an Arduino-style client as a Transport.
+ * @brief Adapter that presents an Arduino-style client as a Transport.
  *
  * Any type with connect(host, port), write(), read(), available(), connected() and
  * stop() can be wrapped; WiFiClient and EthernetClient satisfy this. The adapter
@@ -39,7 +39,7 @@ class ClientTransport : public tinytls::Transport {
 };
 
 /**
- * A TLS client that owns its network client, in the style of WiFiClientSecure.
+ * @brief A TLS client that owns its network client, in the style of WiFiClientSecure.
  *
  * SecureClient creates the transport, the TinyTLS object and the network client
  * itself, so an application needs only one object. Every method forwards to the

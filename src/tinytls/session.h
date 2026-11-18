@@ -28,7 +28,7 @@
 namespace tinytls {
 
 /**
- * AEAD keys for one direction of the TLS 1.3 record layer.
+ * @brief AEAD keys for one direction of the TLS 1.3 record layer.
  *
  * install() derives the key and IV from a traffic secret and starts a fresh record
  * sequence. seal() and open() protect records in place; the nonce is the IV XORed
@@ -137,7 +137,7 @@ class TrafficKeys {
 };
 
 /**
- * TLS 1.3 client session (RFC 8446): handshake, record layer and application data.
+ * @brief TLS 1.3 client session (RFC 8446): handshake, record layer and application data.
  *
  * The session runs over a Transport and draws randomness from a Drbg. Every
  * operation that would block returns Error::WantRead or Error::WantWrite, and the

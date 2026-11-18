@@ -12,7 +12,7 @@
 namespace tinytls {
 
 /**
- * ECDSA signature verification on NIST P-256 (secp256r1, FIPS 186-4).
+ * @brief ECDSA signature verification on NIST P-256 (secp256r1, FIPS 186-4).
  *
  * Construct the object once; it sets up the curve constants. ready() reports
  * whether the setup succeeded. verify() can then be called for each signature.

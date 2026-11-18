@@ -28,7 +28,7 @@
 namespace tinytls {
 
 /**
- * Interface for a source of entropy.
+ * @brief Interface for a source of entropy.
  *
  * Implement poll() to supply random bytes from hardware, a sensor or application
  * data, and register the source with Entropy::addSource(). The source must
@@ -50,7 +50,7 @@ class EntropySource {
 };
 
 /**
- * Entropy source backed by the platform random number generator.
+ * @brief Entropy source backed by the platform random number generator.
  *
  * Behaviour per platform:
  * - ESP32 (Arduino): the hardware RNG through esp_fill_random().
@@ -93,7 +93,7 @@ class PlatformEntropySource : public EntropySource {
 };
 
 /**
- * Entropy pool that mixes several sources through SHA-256.
+ * @brief Entropy pool that mixes several sources through SHA-256.
  *
  * The pool registers the platform source when it is created. Each getBytes()
  * call gathers from every source, then expands the pool with a counter and

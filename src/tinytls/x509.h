@@ -45,7 +45,7 @@ static const uint8_t kSubjectAltName[] = {0x55, 0x1d, 0x11};
 }  // namespace detail
 
 /**
- * Reader for consecutive DER tag-length-value elements.
+ * @brief Reader for consecutive DER tag-length-value elements.
  *
  * next() returns the tag and content of the next element and advances the reader.
  * expect() does the same and also checks the tag. Both accept the short and long
@@ -106,7 +106,7 @@ class DerReader {
 };
 
 /**
- * Base64 decoder for PEM bodies (RFC 4648).
+ * @brief Base64 decoder for PEM bodies (RFC 4648).
  *
  * Decodes standard-alphabet text. Whitespace and '=' padding are skipped; any other
  * character is an error. The caller provides the output buffer. Used by
@@ -142,7 +142,7 @@ class Base64 {
 };
 
 /**
- * Public key taken from an X.509 certificate.
+ * @brief Public key taken from an X.509 certificate.
  *
  * The key is ECDSA on P-256 (an uncompressed point) or RSA. parse() reads the
  * content of a SubjectPublicKeyInfo structure and rejects other curves and
@@ -295,7 +295,7 @@ class PublicKey {
 enum class SignatureAlgorithm { None, EcdsaSha256, RsaPkcs1Sha256, RsaPssSha256 };
 
 /**
- * Parsed X.509 certificate (RFC 5280 subset).
+ * @brief Parsed X.509 certificate (RFC 5280 subset).
  *
  * parse() decodes a DER certificate and extracts what chain validation needs: the
  * issuer and subject names, the validity period, the basicConstraints CA flag, the
@@ -636,7 +636,7 @@ class Certificate {
 };
 
 /**
- * Trust store: a fixed set of owned DER certificates.
+ * @brief Trust store: a fixed set of owned DER certificates.
  *
  * Trust anchors are added from DER with addDer(), from PEM text with addPem(), or
  * from either with add(). The store copies the bytes, so the caller's buffer can
@@ -737,7 +737,7 @@ class CertificateStore {
 };
 
 /**
- * Validates a server certificate chain against a trust store.
+ * @brief Validates a server certificate chain against a trust store.
  *
  * A verifier is created for one check, with a host name (or NULL to skip the name
  * check), the current time (negative if unknown) and the trust store. verify()

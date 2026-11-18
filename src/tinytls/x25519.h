@@ -11,7 +11,7 @@
 namespace tinytls {
 
 /**
- * X25519 Diffie-Hellman key agreement on Curve25519 (RFC 7748).
+ * @brief X25519 Diffie-Hellman key agreement on Curve25519 (RFC 7748).
  *
  * The Montgomery ladder works on the u-coordinate only. publicKey() computes the
  * public key for a 32-byte private scalar, and scalarmult() computes the shared

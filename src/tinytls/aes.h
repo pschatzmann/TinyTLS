@@ -39,7 +39,7 @@ static const uint8_t aes_rcon[10] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0
 }  // namespace detail
 
 /**
- * AES block cipher (FIPS 197), encryption direction only.
+ * @brief AES block cipher (FIPS 197), encryption direction only.
  *
  * Supports 128-bit and 256-bit keys. Decryption is not implemented, because
  * GCM and TLS 1.3 only need the forward cipher. The key schedule is held in

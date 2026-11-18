@@ -10,7 +10,7 @@
 namespace tinytls {
 
 /**
- * Poly1305 one-time authenticator (RFC 8439 section 2.5).
+ * @brief Poly1305 one-time authenticator (RFC 8439 section 2.5).
  *
  * Poly1305 takes a 32-byte one-time key and produces a 16-byte tag. Each key
  * must be used for one message only. ChaCha20Poly1305 derives that key itself,

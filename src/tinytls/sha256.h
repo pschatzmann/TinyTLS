@@ -10,7 +10,7 @@
 namespace tinytls {
 
 /**
- * Incremental SHA-256 hash (FIPS 180-4).
+ * @brief Incremental SHA-256 hash (FIPS 180-4).
  *
  * Feed data with update() and read the digest with finish(). For a single
  * buffer, digest() resets the object and hashes it in one call. A Sha256

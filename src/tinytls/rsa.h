@@ -14,7 +14,7 @@
 namespace tinytls {
 
 /**
- * RSA public key with SHA-256 signature verification.
+ * @brief RSA public key with SHA-256 signature verification.
  *
  * Stores the modulus and public exponent as big-endian bytes. Two schemes are
  * supported, as TLS 1.3 uses them:

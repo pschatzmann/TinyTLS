@@ -32,7 +32,7 @@ enum class Placement {
 };
 
 /**
- * Zero-initialised array on the heap. Not copyable. The contents are wiped
+ * @brief Zero-initialised array on the heap. Not copyable. The contents are wiped
  * when the array is destroyed, so secrets do not linger in freed memory.
  */
 template <typename T>

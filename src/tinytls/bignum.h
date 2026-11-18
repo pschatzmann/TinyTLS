@@ -18,7 +18,7 @@ namespace tinytls {
 class Montgomery;
 
 /**
- * Unsigned integer with a capacity of TINYTLS_MPI_MAX_LIMBS little-endian
+ * @brief Unsigned integer with a capacity of TINYTLS_MPI_MAX_LIMBS little-endian
  * 32-bit limbs. The limbs live on the heap. Copies allocate their own storage.
  */
 class BigInt {
@@ -160,7 +160,7 @@ class BigInt {
 };
 
 /**
- * Modular arithmetic modulo an odd modulus, using Montgomery reduction.
+ * @brief Modular arithmetic modulo an odd modulus, using Montgomery reduction.
  * Values are kept in Montgomery form (a * R mod m, with R = 2^(32k)) when they
  * are multiplied repeatedly. Not copyable: it owns heap scratch space.
  */

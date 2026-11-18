@@ -13,7 +13,7 @@
 #include "x509.h"
 
 /**
- * TLS 1.3 client class for Arduino and desktop C++.
+ * @brief TLS 1.3 client class for Arduino and desktop C++.
  *
  * TinyTLS owns the entropy pool, the random generator, the configuration and the
  * session. The application attaches a transport once, configures verification, and

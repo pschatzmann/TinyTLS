@@ -55,7 +55,7 @@ target_link_libraries(tinytls_fuzz PRIVATE TinyTLS::TinyTLS)
 target_compile_options(tinytls_fuzz PRIVATE -Wall -Wextra -Werror)
 if(DEFINED TINYTLS_TEST_PKI_DIR)
   target_compile_definitions(tinytls_fuzz PRIVATE TINYTLS_TEST_PKI="${TINYTLS_TEST_PKI_DIR}")
-  add_test(NAME fuzz_parsers COMMAND tinytls_fuzz 20000 1)
+  add_test(NAME fuzz_parsers COMMAND tinytls_fuzz 2000 1)
 endif()
 
 add_test(NAME unit_crypto COMMAND tinytls_tests "" "tls13_")

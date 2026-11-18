@@ -1,5 +1,9 @@
 # TinyTLS
 
+[![Arduino Library](https://img.shields.io/badge/Arduino-Library-blue.svg)](https://www.arduino.cc/reference/en/libraries/)
+[![CMake](https://img.shields.io/badge/CMake-Supported-blue.svg)](https://github.com/pschatzmann/TinyTLS/blob/main/CMakeLists.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/pschatzmann/TinyTLS/blob/main/LICENSE)
+
 ## Introduction
 
 TinyTLS is a header-only TLS 1.3 client for Arduino and desktop C++. It is

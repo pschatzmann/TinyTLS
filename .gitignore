@@ -1,0 +1,43 @@
+# CMake build directories and test output
+build/
+build-*/
+Testing/
+
+# Logs produced by test runs
+*.log
+
+# Compiler and analysis output
+*.o
+*.obj
+*.a
+*.so
+*.su
+*.gcda
+*.gcno
+*.gcov
+compile_commands.json
+
+# Doxygen output (the Doxyfile itself is tracked)
+docs/html/
+docs/latex/
+
+# Arduino and PlatformIO build output
+.pio/
+*.elf
+*.hex
+*.bin
+
+# Keys and serials created during test PKI generation outside build/
+*.key
+*.srl
+
+# Editors and operating system files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Python caches
+__pycache__/

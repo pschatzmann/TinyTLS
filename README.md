@@ -1,0 +1,39 @@
+# TinyTLS
+
+## Introduction
+
+TinyTLS is a header-only TLS 1.3 client for Arduino and desktop C++. It is
+written in C++11 and has no external dependencies. The high-level `SecureClient`
+class works like `WiFiClientSecure`, and `TinyTLS` runs the session over any
+transport you attach. Server certificates are validated against a trust store.
+
+## Documentation
+
+- [Usage](docs/usage.md): `SecureClient`, `TinyTLS`, certificate validation and errors
+- [Security](docs/security.md): status, validation rules, verification modes and known limits
+- [Platforms and memory](docs/platforms.md): PSRAM placement, stack use, entropy and supported boards
+- [Design and layout](docs/design.md): components, layout and the API reference
+- [Testing and fuzzing](docs/testing.md): running the tests, the fuzzer and sanitizer builds
+- API reference: `doxygen Doxyfile`, output in `docs/html`
+
+## Installation
+
+**Arduino.** Download the repository as a ZIP file and install it with
+*Sketch > Include Library > Add .ZIP Library*. Or copy the folder into your
+`libraries` directory. Then include the umbrella header:
+
+```cpp
+#include <TinyTLS.h>
+```
+
+**Desktop (CMake).** Requires a C++11 compiler and CMake 3.14 or later. The tests
+also need `openssl` on the path.
+
+```bash
+cmake -S . -B build
+cmake --build build
+cd build && ctest --output-on-failure
+```
+
+To use the headers from another CMake project, add the repository as a
+subdirectory and link `TinyTLS::TinyTLS`, or install it with `cmake --install build`.

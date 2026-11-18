@@ -1,0 +1,76 @@
+name: Doxygen GitHub Pages Deploy Action
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+env:
+  DOXYGEN_VERSION: 1.9.8
+
+jobs:
+  doxygen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Doxygen ${{ env.DOXYGEN_VERSION }}
+        run: |
+          V=${DOXYGEN_VERSION}
+          curl -fsSL "https://github.com/doxygen/doxygen/releases/download/Release_${V//./_}/doxygen-${V}.linux.bin.tar.gz" | tar xz
+          sudo install -m 755 "doxygen-${V}/bin/doxygen" /usr/local/bin/doxygen
+          doxygen --version
+
+      - name: Generate Doxygen documentation
+        run: |
+          mkdir -p build
+          doxygen Doxyfile
+
+      - name: Fail on Doxygen warnings
+        run: |
+          if [ -s build/doxygen_warnings.txt ]; then
+            echo "Doxygen reported warnings:"
+            cat build/doxygen_warnings.txt
+            exit 1
+          fi
+
+      - name: Create .nojekyll
+        run: touch docs/html/.nojekyll
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: doxygen-html
+          path: docs/html
+
+  deploy:
+    needs: doxygen
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Doxygen ${{ env.DOXYGEN_VERSION }}
+        run: |
+          V=${DOXYGEN_VERSION}
+          curl -fsSL "https://github.com/doxygen/doxygen/releases/download/Release_${V//./_}/doxygen-${V}.linux.bin.tar.gz" | tar xz
+          sudo install -m 755 "doxygen-${V}/bin/doxygen" /usr/local/bin/doxygen
+
+      - name: Generate Doxygen documentation
+        run: |
+          mkdir -p build
+          doxygen Doxyfile
+
+      - name: Create .nojekyll
+        run: touch docs/html/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: doxygen
+          folder: docs/html

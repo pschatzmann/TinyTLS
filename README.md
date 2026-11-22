@@ -2,7 +2,7 @@
 
 [![Arduino Library](https://img.shields.io/badge/Arduino-Library-blue.svg)](https://www.arduino.cc/reference/en/libraries/)
 [![CMake](https://img.shields.io/badge/CMake-Supported-blue.svg)](https://github.com/pschatzmann/TinyTLS/blob/main/CMakeLists.txt)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/pschatzmann/TinyTLS/blob/main/LICENSE)
+[![License: Apache](https://img.shields.io/badge/License-Apache-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Introduction
 
